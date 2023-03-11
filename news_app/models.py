@@ -50,7 +50,3 @@ class Contact(models.Model):
     def __str__(self):
         return self.email
 
-def popular(request):
-    name = models.CharField(max_length=150)
-    email = models.EmailField(max_length=150)
-    message = models.TextField()

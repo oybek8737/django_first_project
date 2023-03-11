@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import TemplateView, ListView
+from django.views.generic import TemplateView, ListView, DeleteView
 
 from .models import New, Category
 from .forms import ContactForm
@@ -97,3 +97,7 @@ def aboutPageView(request):
 
     }
     return render(request, 'news/about.html', context)
+
+class NewDeleteView(DeleteView):
+    model = New
+    template_name = 'news/404.html'
