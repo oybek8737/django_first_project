@@ -50,3 +50,7 @@ class Contact(models.Model):
     def __str__(self):
         return self.email
 
+
+class Search(models.Model):
+    email = models.EmailField(max_length=150)
+    message = models.TextField()
