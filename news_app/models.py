@@ -54,3 +54,7 @@ class Contact(models.Model):
 class Search(models.Model):
     email = models.EmailField(max_length=150)
     message = models.TextField()
+    
+class fastSearch(models.Model):
+    email = models.EmailField(max_length=150)
+    message = models.TextField()
